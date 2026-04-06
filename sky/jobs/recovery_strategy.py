@@ -443,9 +443,8 @@ class StrategyExecutor:
                                 vars_to_restore = {}
                                 try:
                                     for env_var in ENV_VARS_TO_CLEAR:
-                                        vars_to_restore[
-                                            env_var] = os.environ.pop(
-                                                env_var, None)
+                                        vars_to_restore[env_var] = (
+                                            os.environ.pop(env_var, None))
                                         logger.debug('Cleared env var: '
                                                      f'{env_var}')
                                     logger.debug('Env vars for api_start: '
